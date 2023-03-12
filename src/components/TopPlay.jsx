@@ -97,8 +97,9 @@ const TopPlay = () => {
           className="mt-4"
         >
 
-          {topPlays?.map((song, i) => (
+          {topPlays?.map((song) => (
             <SwiperSlide key={song?.key} style={{ width: '25%', height: 'auto' }} className="shadow-lg rounded-full animate-sliderright">
+              console.log(`/artists/${song}`)
               <Link to={`/artists/${song?.artists[0].adamid}`}>
                 <img src={song?.images.background} alt="name" className="rounded-full w-full object-cover" />
               </Link>
